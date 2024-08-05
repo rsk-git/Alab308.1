@@ -4,21 +4,24 @@ const n2 = 15;
 const n3 = 20;
 const n4 = 5;
 
-// Check one: add up to 50
-// This is a fairly simple operation using
-// arithmetic operators and a comparison.
-const isSum50 = (n1 + n2 + n3 + n4) == 50;
+
+
+
 
 // Check two: at least two odd numbers
 // Here, we use modulus to check if something is odd.
 // Since % 2 is 0 if even and 1 if odd, we can use
 // arithmetic to count the total number of odd numbers.
 const isTwoOdd = (n1 % 2) + (n2 % 2) + (n3 % 2) + (n4 % 2) >= 2;
+console.log(isTwoOdd);
+
+
 
 // Check three: no number larger than 25
 // This time, we use the OR operator to check
 // if ANY of the numbers is larger than 25.
 const isOver25 = n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25;
+ console.log(isOver25);
 
 // Check four: all unique numbers
 // This is long, and there are more efficient
@@ -43,3 +46,23 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
   ((n1 % 2) + (n2 % 2) + (n3 % 2) + (n4 % 2) >= 2) && 
   !(n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25) && 
   (n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 != n4);
+
+  //is divisible by 5
+const isdivisibleby5 = (n1%5 ==0) && (n2 % 5 ==0) && (n3 % 5 ==0) && (n4 % 5 ==0);
+console.log('Are these numberes divisible by 5 ?",$(isdivisibleby5)');
+
+//first number is larger than the last. Cache the result in a variable.
+const firstnumberlarger =(n1 >n4);
+console.log('Is first number larger than the last?, $(firstnumberlarger)');
+
+//Accomplish the following arithmetic chain:
+//Subtract the first number from the second number.
+//Multiply the result by the third number.
+//Find the remainder of dividing the result by the fourth number.
+
+const arithmeticchain = ((n2-n1)*n3)%n4
+console.log('The remainder is" ,$(arithmeticchain)');
+
+//Change the way that isOver25 calculates so that we do not need to use the NOT operator (!) in other logic comparisons. Rename the variable as appropriate.
+const isaccurately25 = arithmeticchain == 25;
+console.log(isaccurately25ls - LargestContentfulPaint);
